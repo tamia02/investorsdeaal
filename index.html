@@ -1,0 +1,2467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investors Deaal — Premium Real Estate &amp; Land Consultants Delhi NCR</title>
+  <meta name="description" content="Providing clear, risk-mitigated and RERA-compliant advisory services for plots, farmhouses, flats, and commercial land across Delhi NCR.">
+  
+  <!-- Fonts: Outfit (Global Sans-Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+  
+  <!-- Icons via CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* -------------------------------------------------------------
+       DESIGN SYSTEM & CSS VARIABLES (PREMIUM LIGHT THEME)
+       ------------------------------------------------------------- */
+    :root {
+      --color-primary:       #C0181A;   /* Brand red — main accent */
+      --color-primary-dark:  #8B0F11;   /* Hover red */
+      --color-bg:            #FFFFFF;   /* Main background */
+      --color-surface:       #FFFFFF;   /* White card surface */
+      --color-surface-2:     #F5F2F0;   /* Light warm taupe section background */
+      --color-surface-3:     #ECE7E3;   /* Accent warm gray */
+      --color-white:         #FFFFFF;
+      --color-text:          #2C2523;   /* Warm charcoal primary text */
+      --color-muted:         #7A716E;   /* Muted gray-brown text */
+      --color-border:        #E5DFDB;   /* Soft warm border */
+      --color-overlay:       rgba(20, 20, 20, 0.45); /* Hero dark overlay */
+
+      --font-heading:        'Outfit', sans-serif;
+      --font-body:           'Outfit', sans-serif;
+
+      --text-hero:    clamp(4rem, 8vw, 7rem);   /* H1 hero */
+      --text-display: clamp(2rem, 4vw, 3.2rem);      /* Section headings */
+      --text-xl:      clamp(1.25rem, 2vw, 1.6rem);   /* Sub-headings */
+      --text-lg:      1.125rem;
+      --text-base:    1rem;
+      --text-sm:      0.875rem;
+      --text-xs:      0.75rem;
+
+      --space-xs:   0.5rem;
+      --space-sm:   1rem;
+      --space-md:   2rem;
+      --space-lg:   4rem;
+      --space-xl:   9.5rem;
+      --space-2xl:  12rem;
+    }
+
+    /* -------------------------------------------------------------
+       GLOBAL RESET & BASE STYLES
+       ------------------------------------------------------------- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      padding: var(--space-xl) 5%;
+      position: relative;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F8F9FA;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(192, 24, 26, 0.3);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-primary);
+    }
+
+    /* Signature Design Element: Red Rule Lines */
+    .section-header {
+      margin-bottom: var(--space-lg);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 1.2rem;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 44px;
+      height: 2px;
+      background: var(--color-primary);
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: var(--text-display);
+      font-weight: 400;
+      max-width: 700px;
+    }
+
+    .section-title em {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+
+    .hero-title em {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 900;
+      color: var(--color-primary);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 14px 28px;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border-radius: 0;
+    }
+
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border: 1px solid var(--color-primary);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(192, 24, 26, 0.15);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--color-primary);
+      border: 1px solid var(--color-primary);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(192, 24, 26, 0.1);
+    }
+
+    .btn-enquire {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border: 1px solid var(--color-primary);
+      padding: 12px 24px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      border-radius: 0;
+    }
+
+    .btn-enquire:hover {
+      background-color: var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* Floating WhatsApp Icon */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 56px;
+      height: 56px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      z-index: 998;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+    }
+
+    .floating-whatsapp svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* -------------------------------------------------------------
+       SCROLL ANIMATIONS
+       ------------------------------------------------------------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-container .stagger-item {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--delay, 0s), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--delay, 0s);
+    }
+
+    .stagger-container.visible .stagger-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* -------------------------------------------------------------
+       1. NAVBAR SECTION
+       ------------------------------------------------------------- */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 76px;
+      z-index: 1000;
+      background: transparent;
+      transition: background 0.4s ease, backdrop-filter 0.4s ease, border-bottom 0.4s ease, box-shadow 0.4s ease;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+      border-bottom: 1px solid transparent;
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: 16px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(192, 24, 26, 0.15);
+    }
+
+    .logo-text {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: flex;
+      gap: 6px;
+      color: var(--color-white);
+      transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .logo-text,
+    .navbar.menu-open .logo-text {
+      color: var(--color-text);
+    }
+
+    .logo-text span {
+      color: var(--color-primary);
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 2.8rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.9);
+      text-transform: uppercase;
+      position: relative;
+      padding: 5px 0;
+      transition: color 0.3s ease;
+    }
+
+    .navbar.scrolled .nav-link {
+      color: var(--color-text);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--color-primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--color-primary);
+    }
+
+    .navbar.scrolled .nav-link:hover {
+      color: var(--color-primary);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Hamburger Menu Button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+      padding: 0;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-white);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .navbar.scrolled .hamburger span {
+      background-color: var(--color-text);
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+      background-color: var(--color-text) !important;
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+      background-color: var(--color-text) !important;
+    }
+
+    /* Mobile Menu Overlay */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-menu-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+      padding: 0 10%;
+    }
+
+    .mobile-nav-link {
+      font-family: var(--font-body);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: block;
+    }
+
+    .mobile-nav-link:hover {
+      color: var(--color-primary);
+      transform: scale(1.05);
+    }
+
+    .mobile-cta {
+      margin-top: 1rem;
+      width: 100%;
+      max-width: 280px;
+      justify-content: center;
+    }
+
+    /* -------------------------------------------------------------
+       2. HERO SECTION
+       ------------------------------------------------------------- */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-bg-img,
+    .hero-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-bg-img {
+      filter: brightness(0.9);
+      animation: kenBurns 14s ease-in-out infinite alternate;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(15,15,15,0.4) 0%,
+        rgba(15,15,15,0.6) 60%,
+        rgba(15,15,15,0.92) 100%
+      );
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 860px;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-primary-light);
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: var(--text-hero);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--color-white);
+      margin-bottom: 1.5rem;
+      line-height: 1.12;
+    }
+
+    .hero-title span {
+      font-weight: 300;
+      color: var(--color-white);
+      display: block;
+    }
+
+    .hero-subtext {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .hero-actions .btn-outline {
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+    .hero-actions .btn-outline:hover {
+      background-color: var(--color-primary);
+      color: #FFFFFF;
+      border-color: var(--color-primary);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 64px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      z-index: 4;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+
+    .scroll-indicator:hover {
+      opacity: 1;
+      color: var(--color-primary-light);
+    }
+
+    .scroll-indicator svg {
+      width: 16px;
+      height: 16px;
+      animation: bounce 2s infinite;
+    }
+
+    /* Scrolling ticker style */
+    .ticker-wrap {
+      width: 100%;
+      overflow: hidden;
+      background-color: #FFFFFF;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 16px 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+    }
+
+    .ticker {
+      display: flex;
+      white-space: nowrap;
+      animation: ticker 35s linear infinite;
+    }
+
+    .ticker span {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-text);
+      padding: 0 35px;
+      display: inline-flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .ticker span::after {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background-color: var(--color-primary);
+      border-radius: 50%;
+    }
+
+    /* -------------------------------------------------------------
+       3. TRUST BAR (STATS STRIP)
+       ------------------------------------------------------------- */
+    .trust-bar {
+      background-color: var(--color-bg);
+      padding: 90px 5%;
+      border-bottom: 1px solid var(--color-border);
+      z-index: 6;
+    }
+
+    .stats-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1240px;
+      margin: 0 auto;
+      gap: 20px;
+    }
+
+    .stat-item {
+      text-align: center;
+      flex: 1;
+    }
+
+    .stat-number, .stat-static {
+      font-family: var(--font-body);
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 40px;
+      background-color: var(--color-border);
+    }
+
+    /* -------------------------------------------------------------
+       4. SERVICES / STRATEGIC PROPERTY SOLUTIONS
+       ------------------------------------------------------------- */
+    .services {
+      background-color: var(--color-bg);
+      padding: var(--space-xl) 5%;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 3rem 2.5rem;
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      border-radius: 4px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+      border-color: rgba(192, 24, 26, 0.15);
+    }
+
+    .service-icon {
+      color: var(--color-primary);
+      margin-bottom: 2rem;
+    }
+
+    .service-icon svg {
+      width: 36px;
+      height: 36px;
+      stroke-width: 1.3;
+    }
+
+    .service-title {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+    }
+
+    .service-desc {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--color-muted);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .service-link {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: auto;
+    }
+
+    .service-link svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover .service-link svg {
+      transform: translateX(4px);
+    }
+
+    /* -------------------------------------------------------------
+       5. UNCOMPROMISING STANDARDS OF PROFESSIONALISM
+       ------------------------------------------------------------- */
+    .professionalism {
+      background-color: var(--color-surface-2);
+      padding: var(--space-xl) 5%;
+    }
+
+    .pro-layout {
+      display: flex;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .pro-left {
+      width: 45%;
+    }
+
+    .pro-image-container {
+      position: relative;
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      background-color: var(--color-surface-3);
+    }
+
+    .pro-right {
+      width: 55%;
+    }
+
+    .pro-features {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .pro-feature-item {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .pro-feature-icon {
+      color: var(--color-primary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .pro-feature-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2;
+    }
+
+    .pro-feature-content h3 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .pro-feature-content p {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+
+    /* -------------------------------------------------------------
+       6. FEATURED COLLECTIONS
+       ------------------------------------------------------------- */
+    .featured-listings {
+      background-color: var(--color-bg);
+      padding: var(--space-xl) 5%;
+    }
+
+    .portfolio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: var(--space-lg);
+    }
+
+    .portfolio-header .section-header {
+      margin-bottom: 0;
+    }
+
+    .view-all-link {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--color-primary);
+    }
+
+    .view-all-link:hover {
+      color: var(--color-primary-dark);
+      border-bottom-color: var(--color-primary-dark);
+    }
+
+    .listing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .listing-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: flex;
+      flex-direction: column;
+      border-radius: 4px;
+    }
+
+    .listing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.05);
+      border-color: rgba(192, 24, 26, 0.15);
+    }
+
+    .listing-image-wrap {
+      position: relative;
+      height: 260px;
+      overflow: hidden;
+    }
+
+    .listing-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .listing-card:hover .listing-image-wrap img {
+      transform: scale(1.05);
+    }
+
+    .listing-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      padding: 5px 12px;
+      text-transform: uppercase;
+      z-index: 10;
+      border-radius: 2px;
+    }
+
+    .listing-details {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .listing-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .listing-location svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .listing-name {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 0.5rem;
+      line-height: 1.3;
+    }
+
+    .listing-type {
+      font-family: var(--font-body);
+      font-size: 12.5px;
+      color: var(--color-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .listing-specs {
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      color: var(--color-muted);
+      padding: 1rem 0;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .listing-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .listing-price-label {
+      font-family: var(--font-body);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-muted);
+      margin-bottom: 2px;
+    }
+
+    .listing-price {
+      font-family: var(--font-body);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .listing-cta {
+      font-size: 11px;
+      padding: 0.8rem 1.6rem;
+    }
+
+    /* -------------------------------------------------------------
+       7. HOW IT WORKS (Our Seamless Acquisition Process)
+       ------------------------------------------------------------- */
+    .how-it-works {
+      background-color: var(--color-surface-2);
+      padding: var(--space-xl) 5%;
+    }
+
+    .process-steps {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 5rem;
+      gap: 20px;
+    }
+
+    .process-step {
+      flex: 1;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .process-step-number {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--color-border);
+      color: var(--color-primary);
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+      background-color: var(--color-surface);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+
+    .process-step:hover .process-step-number {
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      transform: translateY(-4px);
+    }
+
+    .step-title {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 0.8rem;
+    }
+
+    .step-desc {
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: var(--color-muted);
+      line-height: 1.6;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    /* -------------------------------------------------------------
+       8. ACCREDITATIONS STRIP
+       ------------------------------------------------------------- */
+    .accreditations {
+      background-color: var(--color-bg);
+      padding: 50px 5%;
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .accreditations-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .accreditation-item {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .accreditation-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-primary);
+    }
+
+    /* -------------------------------------------------------------
+       9. STORIES OF TRUST (TESTIMONIALS)
+       ------------------------------------------------------------- */
+    .testimonials {
+      background-color: var(--color-bg);
+      padding: var(--space-xl) 5%;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .testimonial-card {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      padding: 3rem;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      border-color: rgba(192, 24, 26, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--color-text);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: auto;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-body);
+    }
+
+    .author-info h4 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 2px;
+    }
+
+    .author-info p {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    /* -------------------------------------------------------------
+       10. PRIME LOCATIONS
+       ------------------------------------------------------------- */
+    .areas-cover {
+      background-color: var(--color-surface-2);
+      padding: var(--space-xl) 5%;
+    }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .area-card {
+      background-color: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .area-card:hover {
+      border-color: var(--color-primary);
+      box-shadow: 0 10px 24px rgba(192, 24, 26, 0.05);
+      transform: translateY(-4px);
+    }
+
+    .area-image-wrap {
+      height: 180px;
+      background-color: var(--color-surface-3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .area-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .area-card:hover .area-image-wrap img {
+      transform: scale(1.05);
+    }
+
+    .area-info {
+      padding: 1.5rem;
+    }
+
+    .area-info h4 {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 4px;
+    }
+
+    .area-info p {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    /* -------------------------------------------------------------
+       11. LEAD FORM + CTA SECTION (Connect With An Expert)
+       ------------------------------------------------------------- */
+    .lead-form-section {
+      background-color: var(--color-bg);
+      padding: var(--space-xl) 5%;
+    }
+
+    .form-wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .form-wrapper .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .form-wrapper .eyebrow {
+      justify-content: center;
+    }
+
+    .form-wrapper .eyebrow::before {
+      display: none; /* center eyebrow */
+    }
+
+    .form-container-box {
+      background-color: var(--color-white);
+      border: 1px solid var(--color-border);
+      padding: 3rem;
+      border-radius: 4px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.02);
+      text-align: left;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group-full {
+      grid-column: span 2;
+    }
+
+    .form-label {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      color: var(--color-text);
+      padding: 12px 14px;
+      font-family: var(--font-body);
+      font-size: 14px;
+      outline: none;
+      transition: all 0.3s ease;
+      border-radius: 4px;
+    }
+
+    .form-input::placeholder, .form-textarea::placeholder {
+      color: #A0A5AB;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--color-primary);
+      background-color: var(--color-white);
+    }
+
+    .form-input.input-error, .form-select.input-error {
+      border-color: #EA4335 !important;
+    }
+
+    .form-textarea {
+      resize: vertical;
+    }
+
+    .btn-submit {
+      width: 100%;
+      border: none;
+      padding: 16px;
+      justify-content: center;
+      margin-top: 1.5rem;
+      font-family: var(--font-body);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .form-trust-text {
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: 11px;
+      color: var(--color-muted);
+      margin-top: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .form-trust-text svg {
+      width: 12px;
+      height: 12px;
+      color: var(--color-primary);
+    }
+
+    /* Form Success state */
+    .form-success-state {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .success-icon-wrap {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background-color: rgba(192, 24, 26, 0.05);
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .success-icon-wrap svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .success-title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 0.8rem;
+    }
+
+    .success-msg {
+      font-family: var(--font-body);
+      font-size: 14.5px;
+      color: var(--color-muted);
+      line-height: 1.6;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    /* -------------------------------------------------------------
+       12. FOOTER SECTION
+       ------------------------------------------------------------- */
+    .footer {
+      background-color: var(--color-surface-2);
+      border-top: 1px solid var(--color-border);
+      padding: 70px 5% 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 4rem;
+      margin-bottom: var(--space-lg);
+    }
+
+    .footer-brand-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .footer-logo {
+      height: 40px;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-body);
+      font-size: 1.35rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--color-text);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .footer-desc {
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      color: var(--color-muted);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      max-width: 320px;
+    }
+
+    .footer-rera {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--color-primary);
+      background-color: rgba(192, 24, 26, 0.05);
+      padding: 6px 12px;
+      border: 1px solid rgba(192, 24, 26, 0.15);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 1.8rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-link {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-muted);
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .footer-link:hover {
+      color: var(--color-primary-light);
+      transform: translateX(4px);
+    }
+
+    .footer-contact-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 1.2rem;
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.5;
+    }
+
+    .footer-contact-item svg {
+      width: 16px;
+      height: 16px;
+      color: var(--color-primary);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--color-primary);
+    }
+
+    /* Bottom Copyright Bar */
+    .footer-bottom {
+      border-top: 1px solid var(--color-border);
+      padding-top: 24px;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .footer-copy {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-bottom-link {
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: var(--color-muted);
+    }
+
+    .footer-bottom-link:hover {
+      color: var(--color-primary);
+    }
+
+    /* -------------------------------------------------------------
+       RESPONSIVE BREAKPOINTS (DESKTOP-FIRST)
+       ------------------------------------------------------------- */
+    @media (max-width: 1024px) {
+      .pro-layout {
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+      .pro-left, .pro-right {
+        width: 100%;
+      }
+      .listing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-links, .nav-cta {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      
+      .hero-title {
+        font-size: clamp(2.4rem, 8vw, 3.8rem);
+      }
+      .hero-subtext {
+        max-width: 100%;
+      }
+      
+      .stats-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      .stat-divider {
+        display: none;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .service-card {
+        padding: 2.5rem 2rem;
+      }
+
+      .listing-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .process-steps {
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+      .process-step {
+        width: 100%;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-group-full {
+        grid-column: span 1;
+      }
+      .form-container-box {
+        padding: 2rem 1.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 480px) {
+      section {
+        padding: var(--space-lg) 5%;
+      }
+      .stats-container {
+        grid-template-columns: 1fr;
+      }
+      .areas-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/919999999999?text=Hello%20Investors%20Deaal,%20I%20am%20looking%20for%20property%20advice%20in%20Delhi%20NCR." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <!-- MOBILE OVERLAY MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-container">
+      <a href="#services" class="mobile-nav-link" onclick="toggleMenu()">Services</a>
+      <a href="#professionalism" class="mobile-nav-link" onclick="toggleMenu()">Why Us</a>
+      <a href="#featured-listings" class="mobile-nav-link" onclick="toggleMenu()">Properties</a>
+      <a href="#how-it-works" class="mobile-nav-link" onclick="toggleMenu()">How It Works</a>
+      <a href="#areas" class="mobile-nav-link" onclick="toggleMenu()">Areas</a>
+      <a href="#testimonials" class="mobile-nav-link" onclick="toggleMenu()">Testimonials</a>
+      <a href="#contact" class="mobile-nav-link" onclick="toggleMenu()">Contact</a>
+      <a href="#contact" class="btn btn-outline mobile-cta" onclick="toggleMenu()">Enquire Now</a>
+    </div>
+  </div>
+
+  <!-- SECTION 1: NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo-container" aria-label="Investors Deaal Home">
+        <div class="logo-badge">ID</div>
+        <div class="logo-text">Investors <span>Deaal</span></div>
+      </a>
+      
+      <nav class="navbar-links" aria-label="Main Navigation">
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#featured-listings" class="nav-link">Properties</a>
+        <a href="#professionalism" class="nav-link">Why Us</a>
+        <a href="#areas" class="nav-link">Areas</a>
+        <a href="#contact" class="nav-link">Register</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-enquire">Enquire Now</a>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SECTION 2: HERO -->
+  <section class="hero" id="home">
+    <div class="hero-media">
+      <video class="hero-bg-video" autoplay loop muted playsinline poster="assets/delhi_ncr_skyline_night.png">
+        <source src="assets/Animate_luxury_villa_sequence_video_202606201044.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content reveal">
+      <span class="hero-eyebrow">Delhi NCR's Most Trusted Real Estate Partner</span>
+      <h1 class="hero-title">
+        Find Your
+        <span>Perfect</span>
+        <span><em>Property.</em></span>
+      </h1>
+      <p class="hero-subtext">
+        From plots to farm houses, flats to village properties — we connect serious buyers with verified opportunities across Delhi NCR.
+      </p>
+      
+      <div class="hero-actions">
+        <a href="#featured-listings" class="btn btn-primary">Explore Projects &rarr;</a>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator" onclick="document.getElementById('trust-bar').scrollIntoView();">
+      <span>scroll</span>
+      <i data-lucide="arrow-down"></i>
+    </div>
+
+    <!-- Scrolling Text Ticker -->
+    <div class="ticker-wrap">
+      <div class="ticker">
+        <span>PLOTS</span>
+        <span>FLATS</span>
+        <span>FARM HOUSES</span>
+        <span>VILLAGE PROPERTIES</span>
+        <span>COMMERCIAL LAND</span>
+        <span>DELHI NCR</span>
+        <span>NOIDA</span>
+        <span>GREATER NOIDA</span>
+        <span>YAMUNA EXPRESSWAY</span>
+        <span>GURGAON</span>
+        <span>FARIDABAD</span>
+        <!-- Duplicated for seamless loop -->
+        <span>PLOTS</span>
+        <span>FLATS</span>
+        <span>FARM HOUSES</span>
+        <span>VILLAGE PROPERTIES</span>
+        <span>COMMERCIAL LAND</span>
+        <span>DELHI NCR</span>
+        <span>NOIDA</span>
+        <span>GREATER NOIDA</span>
+        <span>YAMUNA EXPRESSWAY</span>
+        <span>GURGAON</span>
+        <span>FARIDABAD</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: TRUST BAR -->
+  <section id="trust-bar" class="trust-bar">
+    <div class="stats-container">
+      <div class="stat-item reveal">
+        <div class="stat-number counter" data-target="500" data-suffix="+">0</div>
+        <div class="stat-label">Properties Sold</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal">
+        <div class="stat-number counter" data-target="15" data-suffix="+ Years">0</div>
+        <div class="stat-label">Market Experience</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal">
+        <div class="stat-number counter" data-target="200" data-prefix="₹" data-suffix="Cr+">₹0</div>
+        <div class="stat-label">Asset Value Managed</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center;">
+        <div class="eyebrow" style="justify-content: center; margin-bottom: 1rem;">OUR SERVICES</div>
+        <h2 class="section-title">Strategic Property Solutions</h2>
+      </div>
+
+      <div class="services-grid stagger-container reveal">
+        <!-- Card 1 -->
+        <div class="service-card stagger-item">
+          <div class="service-icon">
+            <i data-lucide="home"></i>
+          </div>
+          <h3 class="service-title">Residential</h3>
+          <p class="service-desc">
+            Premium land plots, group housing, and gated communities customized for modern residences.
+          </p>
+          <a href="#contact" class="service-link">Learn More &rarr;</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card stagger-item">
+          <div class="service-icon">
+            <i data-lucide="building"></i>
+          </div>
+          <h3 class="service-title">Commercial</h3>
+          <p class="service-desc">
+            High-yield retail spaces, grade-A office buildings, and strategic commercial land options in NCR's prime sectors.
+          </p>
+          <a href="#contact" class="service-link">Learn More &rarr;</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card stagger-item">
+          <div class="service-icon">
+            <i data-lucide="trending-up"></i>
+          </div>
+          <h3 class="service-title">Investment Advisory</h3>
+          <p class="service-desc">
+            Portfolio analysis, RERA advisory, risk assessment, and market growth strategies for HNIs and retail investors.
+          </p>
+          <a href="#contact" class="service-link">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: UNCOMPROMISING STANDARDS OF PROFESSIONALISM -->
+  <section id="professionalism" class="professionalism">
+    <div class="container">
+      <div class="pro-layout">
+        <!-- Left Column -->
+        <div class="pro-left reveal">
+          <div class="pro-image-container">
+            <img src="assets/IMG_2255.png" alt="Investors Deaal Founder" style="display: block; width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/5;">
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="pro-right reveal">
+          <div class="eyebrow">THE DEAL TRUST</div>
+          <h2 class="section-title">Uncompromising Standards of <em>Professionalism</em></h2>
+          
+          <div class="pro-features stagger-container">
+            <div class="pro-feature-item stagger-item">
+              <div class="pro-feature-icon"><i data-lucide="check"></i></div>
+              <div class="pro-feature-content">
+                <h3>Absolute Transparency</h3>
+                <p>We adhere to clear, document-backed negotiations. What's on paper is what's on deed.</p>
+              </div>
+            </div>
+            <div class="pro-feature-item stagger-item">
+              <div class="pro-feature-icon"><i data-lucide="check"></i></div>
+              <div class="pro-feature-content">
+                <h3>Market Dominance</h3>
+                <p>Our deep-rooted network yields off-market listings, pre-launch access, and local area intelligence before deals reach the public.</p>
+              </div>
+            </div>
+            <div class="pro-feature-item stagger-item">
+              <div class="pro-feature-icon"><i data-lucide="check"></i></div>
+              <div class="pro-feature-content">
+                <h3>Curated Luxury</h3>
+                <p>We don't list everything. We only showcase assets that meet our standards of legality, location, and investment value.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: FEATURED COLLECTIONS -->
+  <section id="featured-listings" class="featured-listings">
+    <div class="container">
+      <div class="portfolio-header reveal">
+        <div>
+          <div class="eyebrow">PORTFOLIO SPOTLIGHT</div>
+          <h2 class="section-title">Featured <em>Collections</em></h2>
+        </div>
+        <a href="#contact" class="view-all-link">View All</a>
+      </div>
+
+      <div class="listing-grid stagger-container reveal">
+        <!-- Listing 1 -->
+        <div class="listing-card stagger-item">
+          <div class="listing-image-wrap">
+            <span class="listing-badge">RERA Approved</span>
+            <img src="assets/listing-penthouse.png" alt="The Grand Penthouses">
+          </div>
+          <div class="listing-details">
+            <span class="listing-location"><i data-lucide="map-pin"></i> Noida Sector 150</span>
+            <h3 class="listing-name">The Grand Penthouses</h3>
+            <p class="listing-type">Residential Apartments</p>
+            <div class="listing-specs">
+              <span>Ready to Move</span><span>•</span><span>3 BHK</span><span>•</span><span>Luxury Club</span>
+            </div>
+            <div class="listing-footer">
+              <div>
+                <div class="listing-price-label">Price</div>
+                <div class="listing-price">₹3.5 Cr <span style="font-size: 11px; font-weight: 300;">onwards</span></div>
+              </div>
+              <a href="#contact" class="btn btn-outline listing-cta">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="listing-card stagger-item">
+          <div class="listing-image-wrap">
+            <span class="listing-badge" style="background-color: #2C2523;">Off-Market</span>
+            <img src="assets/listing-lutyens.png" alt="Lutyens Estates">
+          </div>
+          <div class="listing-details">
+            <span class="listing-location"><i data-lucide="map-pin"></i> Prithviraj Road, New Delhi</span>
+            <h3 class="listing-name">Lutyens Estates</h3>
+            <p class="listing-type">Elite Freehold Mansion</p>
+            <div class="listing-specs">
+              <span>1200 Sq. Yd</span><span>•</span><span>Historic Area</span><span>•</span><span>Clear Title</span>
+            </div>
+            <div class="listing-footer">
+              <div>
+                <div class="listing-price-label">Price</div>
+                <div class="listing-price">₹45.0 Cr <span style="font-size: 11px; font-weight: 300;">onwards</span></div>
+              </div>
+              <a href="#contact" class="btn btn-outline listing-cta">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="listing-card stagger-item">
+          <div class="listing-image-wrap">
+            <span class="listing-badge">Pre-Launch</span>
+            <img src="assets/listing-commercial.png" alt="Sky Tower Commercial">
+          </div>
+          <div class="listing-details">
+            <span class="listing-location"><i data-lucide="map-pin"></i> Sector 62, Gurgaon</span>
+            <h3 class="listing-name">Sky Tower Commercial</h3>
+            <p class="listing-type">Grade-A Corporate Spaces</p>
+            <div class="listing-specs">
+              <span>High Yield ROI</span><span>•</span><span>Multi-Tenant</span><span>•</span><span>Pre-Leased</span>
+            </div>
+            <div class="listing-footer">
+              <div>
+                <div class="listing-price-label">Price</div>
+                <div class="listing-price">₹12.0 Cr <span style="font-size: 11px; font-weight: 300;">onwards</span></div>
+              </div>
+              <a href="#contact" class="btn btn-outline listing-cta">Enquire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: PROCESS (Our Seamless Acquisition Process) -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="section-header reveal" style="text-align: center;">
+        <div class="eyebrow" style="justify-content: center; margin-bottom: 1rem;">THE LEGACY PATH</div>
+        <h2 class="section-title">Our Seamless <em>Acquisition Process</em></h2>
+      </div>
+
+      <div class="process-steps stagger-container reveal">
+        <!-- Step 1 -->
+        <div class="process-step stagger-item">
+          <div class="process-step-number">01</div>
+          <h3 class="step-title">Consultation</h3>
+          <p class="step-desc">Defining your investment goals and property requirements.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step stagger-item">
+          <div class="process-step-number">02</div>
+          <h3 class="step-title">Curation</h3>
+          <p class="step-desc">A filtered selection of assets that align with your criteria.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step stagger-item">
+          <div class="process-step-number">03</div>
+          <h3 class="step-title">Acquisition</h3>
+          <p class="step-desc">Guided inspections and hands-on legal vetting.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step stagger-item">
+          <div class="process-step-number">04</div>
+          <h3 class="step-title">Management</h3>
+          <p class="step-desc">Post-purchase support, registry assistance, and leasing options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: ACCREDITATIONS -->
+  <section class="accreditations">
+    <div class="accreditations-container reveal">
+      <div class="accreditation-item">
+        <i data-lucide="shield-check"></i> RERA REGISTERED AGENT
+      </div>
+      <div class="accreditation-item">
+        <i data-lucide="award"></i> BEST ADVISORY CONSULTANT 2024
+      </div>
+      <div class="accreditation-item">
+        <i data-lucide="globe"></i> REAL ESTATE EXCELLENCE CIRCLE
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: STORIES OF TRUST -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">CLIENT VOICES</div>
+        <h2 class="section-title">Stories of <em>Trust</em></h2>
+      </div>
+
+      <div class="testimonials-grid stagger-container reveal">
+        <!-- Card 1 -->
+        <div class="testimonial-card stagger-item">
+          <p class="testimonial-quote">
+            "The level of insight provided by Investors Deaal is unmatched. They don't just sell property; they understand the legacy one wants to build with their high-value acquisitions."
+          </p>
+          <div class="testimonial-author">
+            <div class="avatar">KK</div>
+            <div class="author-info">
+              <h4>Kunal Kapoor</h4>
+              <p>Founder, Kapoor &amp; Co, Delhi</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card stagger-item">
+          <p class="testimonial-quote">
+            "Finding an off-market plot in Delhi's elite areas seemed impossible until we met the team. Professional, discreet, and absolute experts in transaction law."
+          </p>
+          <div class="testimonial-author">
+            <div class="avatar">N</div>
+            <div class="author-info">
+              <h4>Namrata</h4>
+              <p>Managing Director, Altus Noida</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 10: PRIME LOCATIONS -->
+  <section id="areas" class="areas-cover">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="eyebrow">TARGETED INVESTMENT HUBS</div>
+        <h2 class="section-title">Prime <em>Locations</em></h2>
+      </div>
+
+      <div class="areas-grid stagger-container reveal">
+        <!-- Area 1 -->
+        <div class="area-card stagger-item">
+          <div class="area-image-wrap">
+            <img src="assets/area-gurugram.png" alt="Gurugram">
+          </div>
+          <div class="area-info">
+            <h4>Gurugram</h4>
+            <p>Commercial &amp; Golf Estates</p>
+          </div>
+        </div>
+
+        <!-- Area 2 -->
+        <div class="area-card stagger-item">
+          <div class="area-image-wrap">
+            <img src="assets/area-southdelhi.png" alt="South Delhi">
+          </div>
+          <div class="area-info">
+            <h4>South Delhi</h4>
+            <p>Luxury Villas &amp; Freehold Plots</p>
+          </div>
+        </div>
+
+        <!-- Area 3 -->
+        <div class="area-card stagger-item">
+          <div class="area-image-wrap">
+            <img src="assets/area-noida.png" alt="Noida">
+          </div>
+          <div class="area-info">
+            <h4>Noida</h4>
+            <p>High-Rise Apartments</p>
+          </div>
+        </div>
+
+        <!-- Area 4 -->
+        <div class="area-card stagger-item">
+          <div class="area-image-wrap">
+            <img src="assets/area-lutyens.png" alt="Lutyens">
+          </div>
+          <div class="area-info">
+            <h4>Lutyens</h4>
+            <p>Historic Mansions &amp; Elite Estates</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11: CONNECT WITH AN EXPERT -->
+  <section id="contact" class="lead-form-section">
+    <div class="container">
+      <div class="form-wrapper">
+        <div class="section-header reveal">
+          <div class="eyebrow" style="margin-bottom: 1rem;">START YOUR LEGACY</div>
+          <h2 class="section-title">Connect With <em>An Expert</em></h2>
+        </div>
+        
+        <div class="form-container-box reveal">
+          <form id="leadForm" novalidate>
+            <div class="form-grid">
+              <!-- Name -->
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name</label>
+                <input type="text" id="fullName" class="form-input" placeholder="Enter your name" required>
+              </div>
+              
+              <!-- Phone -->
+              <div class="form-group">
+                <label class="form-label" for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" class="form-input" placeholder="+91 00000 00000" required>
+              </div>
+
+              <!-- Location Dropdown -->
+              <div class="form-group form-group-full">
+                <label class="form-label" for="location">Preferred Location</label>
+                <select id="location" class="form-select" required>
+                  <option value="" disabled selected>Select Location</option>
+                  <option value="South Delhi">South Delhi</option>
+                  <option value="Gurugram">Gurugram</option>
+                  <option value="Noida">Noida</option>
+                  <option value="Yamuna Expressway">Yamuna Expressway</option>
+                  <option value="Faridabad">Faridabad</option>
+                  <option value="Ghaziabad">Ghaziabad</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group form-group-full">
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" class="form-textarea" rows="4" placeholder="Share details of your requirement"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              Request Asset Portfolio &rarr;
+            </button>
+
+            <p class="form-trust-text">
+              <i data-lucide="lock"></i> Your details are 100% secure. We never share your data.
+            </p>
+          </form>
+
+          <!-- Success State -->
+          <div class="form-success-state" id="formSuccess">
+            <div class="success-icon-wrap">
+              <i data-lucide="check"></i>
+            </div>
+            <h3 class="success-title">Request Received</h3>
+            <p class="success-msg">
+              Thank you. Connecting you to our expert HNI advisor via WhatsApp to share our private portfolio listings...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12: FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand column -->
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" style="height: 40px; width: auto;">
+              <rect x="5" y="5" width="70" height="70" rx="18" fill="#C0181A" />
+              <text x="40" y="49" font-family="var(--font-body)" font-size="34px" font-weight="800" fill="#FFFFFF" text-anchor="middle">ID</text>
+              <text x="90" y="38" font-family="var(--font-body)" font-size="26px" font-weight="700" fill="#1A1D20">Investors</text>
+              <text x="90" y="66" font-family="var(--font-body)" font-size="26px" font-weight="700" fill="#C0181A">Deaal</text>
+            </svg>
+          </div>
+          <p class="footer-desc">
+            Specializing in plots, flats, and farmhouses for premium clients and investment portfolios across Delhi NCR.
+          </p>
+          <div class="footer-rera">
+            <i data-lucide="check-square"></i> RERA Reg No: HRERA-PKL-REA-2022-25
+          </div>
+        </div>
+
+        <!-- Explore column -->
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="#featured-listings" class="footer-link">Residential Properties</a></li>
+            <li><a href="#services" class="footer-link">Commercial Spaces</a></li>
+            <li><a href="#featured-listings" class="footer-link">High-Yield Plots</a></li>
+            <li><a href="#featured-listings" class="footer-link">Off-Market Estates</a></li>
+          </ul>
+        </div>
+
+        <!-- Offices column -->
+        <div class="footer-col">
+          <h4>OFFICES</h4>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <strong>Noida</strong><br>
+              B-82, Sector 63, Noida, U.P. 201301
+            </div>
+          </div>
+          <div class="footer-contact-item" style="margin-top: 1rem;">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <strong>Gurugram</strong><br>
+              Office 44, Golf Course Ext Rd, Sector 56, Gurugram, Haryana 122011
+            </div>
+          </div>
+        </div>
+
+        <!-- Support column -->
+        <div class="footer-col">
+          <h4>SUPPORT</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer-link">Terms of Service</a></li>
+            <li><a href="#" class="footer-link">RERA Disclaimer</a></li>
+            <li><a href="#" class="footer-link">HNI Assistance</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 Investors Deaal. All rights reserved.
+        </p>
+        <p class="footer-copy" style="font-size: 11px;">
+          Designed for HNI Portfolios
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- -------------------------------------------------------------
+       JAVASCRIPT INTERACTIONS
+       ------------------------------------------------------------- -->
+  <script>
+    // Initialize Lucide Icons
+    document.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+    });
+
+    // 1. Navbar transparent-to-white background transition
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // 2. Mobile Menu toggle
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    function toggleMenu() {
+      hamburgerBtn.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      navbar.classList.toggle('menu-open');
+      
+      if (mobileMenu.classList.contains('open')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    }
+    
+    hamburgerBtn.addEventListener('click', toggleMenu);
+
+    function closeMenu() {
+      if (mobileMenu.classList.contains('open')) {
+        toggleMenu();
+      }
+    }
+
+    // 3. Smooth scroll on anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = a.getAttribute('href');
+        if (targetId === '#') return;
+        
+        closeMenu();
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // 4. Counter animation
+    function animateCounter(el) {
+      const target = parseFloat(el.dataset.target);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const isDecimal = el.dataset.decimal === 'true';
+      const duration = 1800;
+      const steps = 60;
+      const increment = target / steps;
+      let current = 0;
+      const timer = setInterval(() => {
+        current = Math.min(current + increment, target);
+        el.textContent = prefix + (isDecimal ? current.toFixed(1) : Math.floor(current).toLocaleString('en-IN')) + suffix;
+        if (current >= target) clearInterval(timer);
+      }, duration / steps);
+    }
+
+    // 5. IntersectionObserver — reveal animations + counter trigger
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          if (entry.target.classList.contains('counter') && !entry.target.classList.contains('animated')) {
+            entry.target.classList.add('animated');
+            animateCounter(entry.target);
+          }
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal, .counter').forEach(el => revealObserver.observe(el));
+
+    // Stagger container setup
+    const staggerContainers = document.querySelectorAll('.stagger-container');
+    staggerContainers.forEach(container => {
+      const items = container.querySelectorAll('.stagger-item');
+      items.forEach((item, index) => {
+        item.style.setProperty('--delay', `${index * 0.15}s`);
+      });
+      revealObserver.observe(container);
+    });
+
+    // 6. Lead Form validation & WhatsApp redirection
+    const leadForm = document.getElementById('leadForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    leadForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Reset input errors
+      const fields = leadForm.querySelectorAll('.form-input, .form-select');
+      fields.forEach(field => field.classList.remove('input-error'));
+
+      let isValid = true;
+      const fullName = document.getElementById('fullName').value.trim();
+      const phoneNumber = document.getElementById('phoneNumber').value.trim();
+      const location = document.getElementById('location').value;
+      const message = document.getElementById('message').value.trim();
+
+      // Check required fields
+      if (!fullName) {
+        document.getElementById('fullName').classList.add('input-error');
+        isValid = false;
+      }
+      
+      if (!phoneNumber || phoneNumber.length < 5) {
+        document.getElementById('phoneNumber').classList.add('input-error');
+        isValid = false;
+      }
+
+      if (!location) {
+        document.getElementById('location').classList.add('input-error');
+        isValid = false;
+      }
+
+      if (!isValid) {
+        leadForm.querySelector('.input-error').focus();
+        return;
+      }
+
+      // Prepare text message for WhatsApp redirect
+      const waMsg = `Hello Investors Deaal, I am interested in property consulting. Here are my details:
+• *Name:* ${fullName}
+• *Phone:* ${phoneNumber}
+• *Preferred Location:* ${location}
+• *Message:* ${message || 'N/A'}`;
+
+      const encodedMsg = encodeURIComponent(waMsg);
+      const whatsappUrl = `https://wa.me/919999999999?text=${encodedMsg}`;
+
+      // Show success screen
+      leadForm.style.display = 'none';
+      formSuccess.style.display = 'block';
+
+      // Redirect after a short delay
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
