@@ -35,8 +35,8 @@
       --color-border:        #E5DFDB;   /* Soft warm border */
       --color-overlay:       rgba(20, 20, 20, 0.45); /* Hero dark overlay */
 
-      --font-heading:        'Cormorant Garamond', serif;
-      --font-body:           'Montserrat', sans-serif;
+      --font-heading:        'Times New Roman', Times, serif;
+      --font-body:           'Times New Roman', Times, serif;
 
 
       --text-hero:    clamp(4rem, 8vw, 7rem);   /* H1 hero */
@@ -73,7 +73,7 @@
       color: var(--color-text);
       font-family: var(--font-body);
       font-weight: 300;
-      font-size: 15px;
+      font-size: 17px;
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -214,19 +214,20 @@
     }
 
     .btn-enquire {
-      background-color: var(--color-primary);
-      color: var(--color-white);
-      border: 1px solid var(--color-primary);
+      background-color: var(--color-white);
+      color: var(--color-primary);
+      border: 1px solid var(--color-white);
       padding: 12px 24px;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.08em;
-      border-radius: 0;
+      border-radius: 30px;
     }
 
     .btn-enquire:hover {
-      background-color: var(--color-primary-dark);
-      border-color: var(--color-primary-dark);
+      background-color: var(--color-surface-2);
+      border-color: var(--color-surface-2);
+      color: var(--color-primary-dark);
       transform: translateY(-2px);
     }
 
@@ -292,13 +293,13 @@
       left: 0;
       width: 100%;
       height: 36px;
-      background-color: var(--color-primary);
-      color: var(--color-white);
+      background-color: var(--color-white);
+      color: var(--color-primary);
       z-index: 1001;
       display: flex;
       align-items: center;
       overflow: hidden;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid var(--color-border);
     }
 
     .announcement-bar .ticker {
@@ -340,7 +341,7 @@
       width: 100%;
       height: 76px;
       z-index: 1000;
-      background: transparent;
+      background: var(--color-primary);
       transition: background 0.4s ease, backdrop-filter 0.4s ease, border-bottom 0.4s ease, box-shadow 0.4s ease;
       display: flex;
       align-items: center;
@@ -349,7 +350,7 @@
     }
 
     .navbar.scrolled {
-      background: rgba(255, 255, 255, 0.97);
+      background: var(--color-primary);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-border);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -399,7 +400,7 @@
     }
 
     .navbar.scrolled .nav-link {
-      color: var(--color-text);
+      color: var(--color-white);
     }
 
     .nav-link::after {
@@ -444,7 +445,7 @@
     }
 
     .navbar.scrolled .nav-social-link {
-      color: var(--color-text);
+      color: var(--color-white);
     }
 
     .navbar.scrolled .nav-social-link:hover {
@@ -480,12 +481,12 @@
     }
 
     .navbar.scrolled .hamburger span {
-      background-color: var(--color-text);
+      background-color: var(--color-white);
     }
 
     .hamburger.open span:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
-      background-color: var(--color-text) !important;
+      background-color: var(--color-white) !important;
     }
 
     .hamburger.open span:nth-child(2) {
@@ -494,7 +495,7 @@
 
     .hamburger.open span:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
-      background-color: var(--color-text) !important;
+      background-color: var(--color-white) !important;
     }
 
     /* Mobile Menu Overlay */
@@ -725,7 +726,7 @@
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--color-text);
+      color: var(--color-primary);
       padding: 0 35px;
       display: inline-flex;
       align-items: center;
@@ -763,11 +764,22 @@
     .stat-item {
       text-align: center;
       flex: 1;
+      padding: 30px;
+      border-radius: 12px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .stat-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(192,24,26,0.1);
+      border-color: rgba(192,24,26,0.2);
     }
 
     .stat-number, .stat-static {
       font-family: var(--font-body);
-      font-size: 3.2rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: var(--color-primary);
       line-height: 1.1;
@@ -1398,8 +1410,8 @@
     }
 
     .avatar {
-      width: 40px;
-      height: 40px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       background: var(--color-primary);
       color: var(--color-white);
@@ -2103,10 +2115,6 @@
   <!-- MOBILE OVERLAY MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-container">
-      <a href="#services" class="mobile-nav-link" onclick="toggleMenu()">Services</a>
-      <a href="#professionalism" class="mobile-nav-link" onclick="toggleMenu()">Why Us</a>
-      <a href="#leadership" class="mobile-nav-link" onclick="toggleMenu()">Leadership</a>
-      <a href="#featured-listings" class="mobile-nav-link" onclick="toggleMenu()">Properties</a>
       <a href="#how-it-works" class="mobile-nav-link" onclick="toggleMenu()">How It Works</a>
       <a href="#areas" class="mobile-nav-link" onclick="toggleMenu()">Areas</a>
       <a href="#testimonials" class="mobile-nav-link" onclick="toggleMenu()">Testimonials</a>
@@ -2118,15 +2126,11 @@
   <!-- SECTION 1: NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="logo-container" aria-label="Investors Deaal Home">
+      <a href="#home" class="logo-container" aria-label="Investors Deaal Home">
         <img src="assets/logo-transparent.png" alt="Investors Deaal Logo" class="logo-img">
       </a>
       
       <nav class="navbar-links" aria-label="Main Navigation">
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#featured-listings" class="nav-link">Properties</a>
-        <a href="#professionalism" class="nav-link">Why Us</a>
-        <a href="#leadership" class="nav-link">Leadership</a>
         <a href="#areas" class="nav-link">Areas</a>
         <a href="#contact" class="nav-link">Register</a>
       </nav>
@@ -2168,7 +2172,7 @@
     <div class="hero-overlay"></div>
     
     <div class="hero-content reveal">
-      <span class="hero-eyebrow">India's Most Trusted Real Estate Partner</span>
+      
       <h1 class="hero-title">
         Find Your
         <span>Perfect</span>
@@ -2180,6 +2184,7 @@
       
       <div class="hero-actions">
         <a href="#featured-listings" class="btn btn-primary">Explore Projects &rarr;</a>
+        <a href="#contact" class="btn btn-primary" style="background-color: var(--color-white); color: var(--color-primary); border-color: var(--color-white);">Enquire Now</a>
       </div>
     </div>
     
@@ -2215,8 +2220,8 @@
   <section id="services" class="services">
     <div class="container">
       <div class="section-header reveal" style="text-align: center;">
-        <div class="eyebrow" style="justify-content: center; margin-bottom: 1rem;">OUR SERVICES</div>
-        <h2 class="section-title">Strategic Property Solutions</h2>
+        <h2 class="section-title" style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; text-transform: uppercase;">Our Services</h2>
+        <div class="eyebrow" style="justify-content: center; font-size: 1.2rem; font-weight: 500; color: var(--color-text); margin-bottom: 1rem; text-transform: none; letter-spacing: normal;">Strategic Property Solutions</div>
       </div>
 
       <div class="services-grid stagger-container reveal">
@@ -2520,7 +2525,7 @@
         <!-- Card 1 -->
         <div class="testimonial-card stagger-item">
           <p class="testimonial-quote">
-            "The level of insight provided by Investors Deaal is unmatched. They don't just sell property; they understand the legacy one wants to build with their high-value acquisitions."
+            "Investors Deaal provided exceptional service. Their team guided us through every step and ensured a smooth transaction."
           </p>
           <div class="testimonial-author">
             <img class="avatar" src="assets/testimonial-kunal.png" alt="Kunal Kapoor">
@@ -2534,7 +2539,7 @@
         <!-- Card 2 -->
         <div class="testimonial-card stagger-item">
           <p class="testimonial-quote">
-            "Finding an off-market plot in Delhi's elite areas seemed impossible until we met the team. Professional, discreet, and absolute experts in transaction law."
+            "Highly recommend! Their professionalism and deep knowledge of the market helped us find our dream property in no time."
           </p>
           <div class="testimonial-author">
             <img class="avatar" src="assets/testimonial-namrata.png" alt="Namrata">
@@ -2552,8 +2557,8 @@
   <section id="areas" class="areas-cover">
     <div class="container">
       <div class="section-header reveal">
-        <div class="eyebrow">TARGETED INVESTMENT HUBS</div>
         <h2 class="section-title">Prime <em>Locations</em></h2>
+        <div class="eyebrow" style="font-size: 1.5rem; font-weight: 700; color: var(--color-primary); letter-spacing: 0.05em; margin-top: 10px; display: block;">Commercial & Golf Estates</div>
       </div>
 
       <div class="areas-grid stagger-container reveal">
