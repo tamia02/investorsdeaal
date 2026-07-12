@@ -50,8 +50,8 @@
       --space-xs:   0.5rem;
       --space-sm:   1rem;
       --space-md:   2rem;
-      --space-lg:   4rem;
-      --space-xl:   9.5rem;
+      --space-lg:   3rem;
+      --space-xl:   5rem;
       --space-2xl:  12rem;
     }
 
@@ -214,9 +214,9 @@
     }
 
     .btn-enquire {
-      background-color: var(--color-white);
-      color: var(--color-primary);
-      border: 1px solid var(--color-white);
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border: 1px solid var(--color-primary);
       padding: 12px 24px;
       font-size: 11px;
       font-weight: 600;
@@ -225,9 +225,9 @@
     }
 
     .btn-enquire:hover {
-      background-color: var(--color-surface-2);
-      border-color: var(--color-surface-2);
-      color: var(--color-primary-dark);
+      background-color: var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
+      color: var(--color-white);
       transform: translateY(-2px);
     }
 
@@ -293,8 +293,8 @@
       left: 0;
       width: 100%;
       height: 36px;
-      background-color: var(--color-white);
-      color: var(--color-primary);
+      background-color: var(--color-primary);
+      color: var(--color-white);
       z-index: 1001;
       display: flex;
       align-items: center;
@@ -325,7 +325,7 @@
       display: inline-block;
       width: 4px;
       height: 4px;
-      background-color: var(--color-accent);
+      background-color: var(--color-white);
       border-radius: 50%;
     }
 
@@ -341,7 +341,7 @@
       width: 100%;
       height: 76px;
       z-index: 1000;
-      background: var(--color-primary);
+      background: var(--color-white);
       transition: background 0.4s ease, backdrop-filter 0.4s ease, border-bottom 0.4s ease, box-shadow 0.4s ease;
       display: flex;
       align-items: center;
@@ -350,7 +350,7 @@
     }
 
     .navbar.scrolled {
-      background: var(--color-primary);
+      background: var(--color-white);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--color-border);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -392,7 +392,7 @@
       font-size: 13px;
       font-weight: 400;
       letter-spacing: 0.12em;
-      color: rgba(255, 255, 255, 0.9);
+      color: var(--color-text);
       text-transform: uppercase;
       position: relative;
       padding: 5px 0;
@@ -400,7 +400,7 @@
     }
 
     .navbar.scrolled .nav-link {
-      color: var(--color-white);
+      color: var(--color-text);
     }
 
     .nav-link::after {
@@ -433,7 +433,7 @@
     }
 
     .nav-social-link {
-      color: rgba(255, 255, 255, 0.9);
+      color: var(--color-primary);
       display: flex;
       align-items: center;
       transition: color 0.3s ease, transform 0.3s ease;
@@ -445,11 +445,11 @@
     }
 
     .navbar.scrolled .nav-social-link {
-      color: var(--color-white);
+      color: var(--color-primary);
     }
 
     .navbar.scrolled .nav-social-link:hover {
-      color: var(--color-primary);
+      color: var(--color-primary-dark);
     }
 
     @media (max-width: 768px) {
@@ -476,17 +476,17 @@
       display: block;
       width: 100%;
       height: 2px;
-      background-color: var(--color-white);
+      background-color: var(--color-primary);
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .navbar.scrolled .hamburger span {
-      background-color: var(--color-white);
+      background-color: var(--color-primary);
     }
 
     .hamburger.open span:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
-      background-color: var(--color-white) !important;
+      background-color: var(--color-primary) !important;
     }
 
     .hamburger.open span:nth-child(2) {
@@ -495,7 +495,7 @@
 
     .hamburger.open span:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
-      background-color: var(--color-white) !important;
+      background-color: var(--color-primary) !important;
     }
 
     /* Mobile Menu Overlay */
@@ -612,7 +612,7 @@
       z-index: 3;
       max-width: 860px;
       width: 100%;
-      margin-top: 60px;
+      margin-top: 0px;
     }
 
     .hero-eyebrow {
@@ -656,7 +656,7 @@
       display: flex;
       gap: 1.2rem;
       flex-wrap: wrap;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     .hero-actions .btn-outline {
@@ -779,20 +779,21 @@
 
     .stat-number, .stat-static {
       font-family: var(--font-body);
-      font-size: 2.2rem;
-      font-weight: 700;
+      font-size: 3rem;
+      font-weight: 800;
       color: var(--color-primary);
       line-height: 1.1;
       margin-bottom: 6px;
+      text-shadow: 2px 2px 4px rgba(192, 24, 26, 0.1);
     }
 
     .stat-label {
       font-family: var(--font-body);
-      font-size: 11px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 700;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--color-muted);
+      color: var(--color-text);
     }
 
     .stat-divider {
@@ -847,17 +848,17 @@
 
     .service-title {
       font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 600;
+      font-size: 1.8rem;
+      font-weight: 700;
       color: var(--color-text);
       margin-bottom: 1rem;
     }
 
     .service-desc {
       font-family: var(--font-body);
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
-      color: var(--color-muted);
+      color: var(--color-text);
       margin-bottom: 2rem;
       line-height: 1.7;
     }
@@ -1276,12 +1277,26 @@
       align-items: flex-start;
       margin-top: 5rem;
       gap: 20px;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: var(--color-border);
+      z-index: 0;
     }
 
     .process-step {
       flex: 1;
       text-align: center;
       padding: 0 10px;
+      position: relative;
+      z-index: 1;
     }
 
     .process-step-number {
@@ -1370,14 +1385,32 @@
       padding: var(--space-xl) 5%;
     }
 
+    .testimonials-overflow {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+
     .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
       gap: 2rem;
       margin-top: 1rem;
+      width: max-content;
+      animation: scroll-testimonials 25s linear infinite;
+    }
+
+    .testimonials-grid:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll-testimonials {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50% - 1rem)); }
     }
 
     .testimonial-card {
+      width: 450px;
+      flex-shrink: 0;
       background: var(--color-surface-2);
       border: 1px solid var(--color-border);
       padding: 3rem;
@@ -2180,7 +2213,6 @@
       
       <div class="hero-actions">
         <a href="#featured-listings" class="btn btn-primary">Explore Projects &rarr;</a>
-        <a href="https://forms.gle/u6GNZ4toaXK5PaAV6" target="_blank" class="btn btn-primary" style="background-color: var(--color-white); color: var(--color-primary); border-color: var(--color-white);">Enquire Now</a>
       </div>
     </div>
     
@@ -2517,31 +2549,90 @@
         <h2 class="section-title">Stories of <em>Trust</em></h2>
       </div>
 
-      <div class="testimonials-grid stagger-container reveal">
-        <!-- Card 1 -->
-        <div class="testimonial-card stagger-item">
-          <p class="testimonial-quote">
-            "Investors Deaal provided exceptional service. Their team guided us through every step and ensured a smooth transaction."
-          </p>
-          <div class="testimonial-author">
-            <img class="avatar" src="assets/testimonial-kunal.png" alt="Kunal Kapoor">
-            <div class="author-info">
-              <h4>Kunal Kapoor</h4>
-              <p>Founder, Kapoor &amp; Co, Delhi</p>
+      <div class="testimonials-overflow reveal">
+        <div class="testimonials-grid">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Investors Deaal provided exceptional service. Their team guided us through every step and ensured a smooth transaction."
+            </p>
+            <div class="testimonial-author">
+              <img class="avatar" src="assets/testimonial-kunal.png" alt="Kunal Kapoor">
+              <div class="author-info">
+                <h4>Kunal Kapoor</h4>
+                <p>Founder, Kapoor &amp; Co, Delhi</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="testimonial-card stagger-item">
-          <p class="testimonial-quote">
-            "Highly recommend! Their professionalism and deep knowledge of the market helped us find our dream property in no time."
-          </p>
-          <div class="testimonial-author">
-            <img class="avatar" src="assets/testimonial-namrata.png" alt="Namrata">
-            <div class="author-info">
-              <h4>Namrata</h4>
-              <p>Managing Director, Altus Noida</p>
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Highly recommend! Their professionalism and deep knowledge of the market helped us find our dream property in no time."
+            </p>
+            <div class="testimonial-author">
+              <img class="avatar" src="assets/testimonial-namrata.png" alt="Namrata">
+              <div class="author-info">
+                <h4>Namrata</h4>
+                <p>Managing Director, Altus Noida</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "They recommended a project with excellent growth potential, making my investment decision easy and rewarding."
+            </p>
+            <div class="testimonial-author">
+              <img class="avatar" src="assets/IMG_2255.PNG" alt="Client">
+              <div class="author-info">
+                <h4>Client</h4>
+                <p>Investor</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- DUPLICATE FOR SEAMLESS SCROLL -->
+          <!-- Card 1 Duplicate -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Investors Deaal provided exceptional service. Their team guided us through every step and ensured a smooth transaction."
+            </p>
+            <div class="testimonial-author">
+              <img class="avatar" src="assets/testimonial-kunal.png" alt="Kunal Kapoor">
+              <div class="author-info">
+                <h4>Kunal Kapoor</h4>
+                <p>Founder, Kapoor &amp; Co, Delhi</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 Duplicate -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "Highly recommend! Their professionalism and deep knowledge of the market helped us find our dream property in no time."
+            </p>
+            <div class="testimonial-author">
+              <img class="avatar" src="assets/testimonial-namrata.png" alt="Namrata">
+              <div class="author-info">
+                <h4>Namrata</h4>
+                <p>Managing Director, Altus Noida</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 Duplicate -->
+          <div class="testimonial-card">
+            <p class="testimonial-quote">
+              "They recommended a project with excellent growth potential, making my investment decision easy and rewarding."
+            </p>
+            <div class="testimonial-author">
+              <img class="avatar" src="assets/IMG_2255.PNG" alt="Client">
+              <div class="author-info">
+                <h4>Client</h4>
+                <p>Investor</p>
+              </div>
             </div>
           </div>
         </div>
