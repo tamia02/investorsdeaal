@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://company.investordeaal.com/sitemap.xml
+Sitemap: https://company.investorsdeaal.in/sitemap.xml
